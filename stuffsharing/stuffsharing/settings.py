@@ -78,10 +78,7 @@ WSGI_APPLICATION = 'stuffsharing.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+    'default': dj_database_url.config()
 }
 
 AUTH_PASSWORD_VALIDATORS = [
@@ -131,3 +128,11 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Tries to import local settings, if on dev, 
+# import everything in local_Settings, which overrides the dj_database_url
+# If on deploy, local_settings won't be found so just ignore the ImportError
+try:
+    from .local_settings import *
+except ImportError:
+    pass
