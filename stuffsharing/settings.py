@@ -28,10 +28,6 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
->>>>>>> d2c529cc58133c31053c70934fa2e7d4330c24f2
-
 # Application definition
 
 INSTALLED_APPS = [
