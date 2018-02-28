@@ -18,14 +18,22 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
+=======
+SECRET_KEY = "jaqe5#)4(=a--w4wchm&rrnsn+=79&4(w5ub(6kf3p%(&-m!md"
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+>>>>>>> d2c529cc58133c31053c70934fa2e7d4330c24f2
 
 # Application definition
 
@@ -79,10 +87,18 @@ WSGI_APPLICATION = 'stuffsharing.wsgi.application'
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
     'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
     }
+=======
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+>>>>>>> d2c529cc58133c31053c70934fa2e7d4330c24f2
 
 AUTH_PASSWORD_VALIDATORS = [
     {
