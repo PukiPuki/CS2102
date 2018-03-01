@@ -16,8 +16,23 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from django.shortcuts import render
+from material.frontend import urls as frontend_urls
+from . import forms, widget_forms, admin_forms
 
-urlpatterns = [
+def index_view(request):
+    context = (
+            'login': forms.LoginForm(),
+            'register': forms.RegisterForm(),
+    )
+    return render(request, 'index.html', context)
+
+ = [
     path('bidding_app/',include('bidding_app.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('login/$', generic.FormView.as_view(
+        form_class=forms.LoginForm, success_url='login/', template_name="main.html")),
+    path('register', generic.FormView.as_view(form_class=forms.RegisterForm, success_url='register/', template_name="main.html")), 
+
 ]

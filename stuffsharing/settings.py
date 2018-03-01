@@ -135,6 +135,9 @@ STATICFILES_DIRS = [
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
 # Tries to import local settings, if on dev,
 # import everything in local_Settings, which overrides the dj_database_url
 # If on deploy, local_settings won't be found so just ignore the ImportError
