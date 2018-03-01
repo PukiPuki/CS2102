@@ -16,8 +16,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import include, path
+from django.contrib.auth import views as auth_views
+from django.conf.urls import url
+from stuffsharing.core import views as core_views
 
 urlpatterns = [
-    path('bidding_app/',include('bidding_app.urls')),
+    url(r'^$', core_views.home, name='home'),
+    path('bidding_app/', include('bidding_app.urls')),
     path('admin/', admin.site.urls),
+    url(r'^accounts/login/$', auth_views.login, name='login'),
+    url(r'^logout/$', auth_views.logout, name='logout'),
+    url(r'^signup/$', core_views.signup, name='signup'),
 ]

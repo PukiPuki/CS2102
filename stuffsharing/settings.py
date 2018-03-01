@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'material',
     'material.frontend',
     'bidding_app.apps.BiddingAppConfig',
+    'stuffsharing.core',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +63,7 @@ ROOT_URLCONF = 'stuffsharing.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'stuffsharing/templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,6 +131,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(PROJECT_ROOT, 'static'),
 ]
+
+LOGIN_REDIRECT_URL = 'home'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
