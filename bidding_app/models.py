@@ -12,10 +12,10 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
 class User(models.Model):
-    username = models.CharField(max_length=64)
+    username = models.CharField(primary_key=True, max_length=64)
     password = models.CharField(max_length=64)
     phonenumber = models.IntegerField()
-    isadmin = models.BooleanField(default=False);
+    isadmin = models.BooleanField(default=False)
     
 class Bid(models.Model):
     biddingstatus = models.CharField(max_length=8)

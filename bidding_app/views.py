@@ -6,7 +6,6 @@ from .models import Bid, User
 # Create your views here.
 
 def index(request):
-    users = User.objects.raw('SELECT username FROM users')
-    print(users[0])
-    print("test")
-    return HttpResponse("asd")
+    users = User.objects.raw('select * from auth_user')
+    print(users[0].username)
+    return HttpResponse(users)

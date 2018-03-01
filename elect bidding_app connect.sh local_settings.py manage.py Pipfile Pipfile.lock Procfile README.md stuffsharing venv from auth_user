@@ -1,0 +1,33 @@
++----------+-----------------------------------+----------+----------------+
+| Schema   | Name                              | Type     | Owner          |
+|----------+-----------------------------------+----------+----------------|
+| public   | auth_group                        | table    | nnjquhqhcsmbzg |
+| public   | auth_group_id_seq                 | sequence | nnjquhqhcsmbzg |
+| public   | auth_group_permissions            | table    | nnjquhqhcsmbzg |
+| public   | auth_group_permissions_id_seq     | sequence | nnjquhqhcsmbzg |
+| public   | auth_permission                   | table    | nnjquhqhcsmbzg |
+| public   | auth_permission_id_seq            | sequence | nnjquhqhcsmbzg |
+| public   | auth_user                         | table    | nnjquhqhcsmbzg |
+| public   | auth_user_groups                  | table    | nnjquhqhcsmbzg |
+| public   | auth_user_groups_id_seq           | sequence | nnjquhqhcsmbzg |
+| public   | auth_user_id_seq                  | sequence | nnjquhqhcsmbzg |
+| public   | auth_user_user_permissions        | table    | nnjquhqhcsmbzg |
+| public   | auth_user_user_permissions_id_seq | sequence | nnjquhqhcsmbzg |
+| public   | bidding_app_user                  | table    | nnjquhqhcsmbzg |
+| public   | bids                              | table    | nnjquhqhcsmbzg |
+| public   | django_admin_log                  | table    | nnjquhqhcsmbzg |
+| public   | django_admin_log_id_seq           | sequence | nnjquhqhcsmbzg |
+| public   | django_content_type               | table    | nnjquhqhcsmbzg |
+| public   | django_content_type_id_seq        | sequence | nnjquhqhcsmbzg |
+| public   | django_migrations                 | table    | nnjquhqhcsmbzg |
+| public   | django_migrations_id_seq          | sequence | nnjquhqhcsmbzg |
+| public   | django_session                    | table    | nnjquhqhcsmbzg |
+| public   | frontend_module                   | table    | nnjquhqhcsmbzg |
+| public   | frontend_module_id_seq            | sequence | nnjquhqhcsmbzg |
+| public   | items                             | table    | nnjquhqhcsmbzg |
+| public   | items_itemid_seq                  | sequence | nnjquhqhcsmbzg |
+| public   | transaction                       | table    | nnjquhqhcsmbzg |
+| public   | transaction_tid_seq               | sequence | nnjquhqhcsmbzg |
+| public   | users                             | table    | nnjquhqhcsmbzg |
++----------+-----------------------------------+----------+----------------+
+SELECT 28
