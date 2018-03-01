@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'material',
     'material.frontend',
-    'bidding_app',
+    'bidding_app.apps.BiddingAppConfig',
 ]
 
 MIDDLEWARE = [
